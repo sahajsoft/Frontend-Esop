@@ -26,6 +26,14 @@ font-size: 100px;
   text-align: center;
 }
 
+.userName{
+width: 100px;
+height: 100px;
+padding-top: 50px;
+padding-left: 650px;
+}
+
+
 .block2 {
   display: block;
   width: 100%;
