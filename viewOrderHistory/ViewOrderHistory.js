@@ -12,8 +12,8 @@ function myFunction() {
        let newRow=createTableHeading();
        console.log(newRow)
        Table.appendChild(newRow);
-
-       fetch('http://localhost:8080/user/atul_1/order')
+       var userName = window.localStorage.getItem("userId")
+       fetch(`http://localhost:8080/user/${userName}/order`)
             .then(function (response) {
                 return response.json();
             }).then(function (apiJsonData) {
@@ -30,7 +30,7 @@ function renderDataInTheTable(orders) {
                 let newRow = document.createElement("tr");
 
                     let cell = document.createElement("td");
-                    cell.innerText = order["id"].second;
+                    cell.innerText = order["id"].first;
                     newRow.appendChild(cell);
 
                      cell = document.createElement("td");
@@ -81,6 +81,7 @@ function renderDataInTheTable(orders) {
 function createTableForTransaction(filledOrder) {
   const table = document.createElement("table");
   table.id="transTable"
+  table.class="tableFixHead"
   const tableBody = document.createElement("tbody");
 
     const newRow = document.createElement("tr");

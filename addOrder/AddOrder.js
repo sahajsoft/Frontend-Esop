@@ -29,6 +29,7 @@ form.addEventListener("submit", function(event) {
 
     if(type=="SELL")
     {
+    console.log("IN sell")
         content = JSON.stringify({
                         quantity: parseInt(qty.value),
                         type: type,
@@ -45,7 +46,9 @@ form.addEventListener("submit", function(event) {
                          })
       }
 
-	fetch("http://localhost:8080/user/atul_1/order", {
+    var userName = window.localStorage.getItem("userId")
+    console.log(userName);
+	fetch(`http://localhost:8080/user/${userName}/order`, {
 			method: "POST",
 			headers: {
                 "Content-type": "application/json; charset=UTF-8"
