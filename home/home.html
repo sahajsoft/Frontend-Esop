@@ -10,8 +10,13 @@
     <h1>ESOPS Trading Platform</h1>
 
     <div class ="userName">
-        <label for="fname"  >UserName</label>
-        <input type="text" id="fname" name="fname" placeholder="Enter userName" >
+        <table>
+
+            <td><label for="fname"  >UserName</label></td>
+            <td><input type="text" id="fname" name="fname" placeholder="Enter userName" ></td>
+            <td><button class= "fieldName" onclick="inputStorage()" >Add UserName</button></td>
+        </table>
+
     </div>
 
     <div class="container">
@@ -21,15 +26,12 @@
 
     <script>
         function addOrder() {
-
             location.href = location.href = "../addOrder/AddOrder.html";
         }
-        function viewOrders()
-        {
+        function viewOrders() {
             location.href = location.href = "../viewOrderHistory/viewOrderHistory.html";
         }
     </script>
-
 </body>
 
 </html>
