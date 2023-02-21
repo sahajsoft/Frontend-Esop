@@ -31,6 +31,12 @@
         function viewOrders() {
             location.href = location.href = "../viewOrderHistory/viewOrderHistory.html";
         }
+
+        function inputStorage() {
+           const userId = document.getElementById("fname").value;
+            window.localStorage.setItem("userId",userId)
+        }
+
     </script>
 </body>
 
