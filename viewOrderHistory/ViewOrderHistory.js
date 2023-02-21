@@ -63,13 +63,15 @@ function renderDataInTheTable(orders) {
                     cell.innerText = order["filledQty"];
                     newRow.appendChild(cell);
 
-
+                    cell = document.createElement("td");
+                    cell.innerText = "unfilledOrder"
                      if(order["filled"]){
                      cell = createTableForTransaction(order["filled"])
                      console.log(typeof(order["filled"][0].price))
                      //cell.innerText = createTableForTransaction()
-                     newRow.appendChild(cell);
+
                     }
+                    newRow.appendChild(cell);
 
                 mytable.appendChild(newRow);
             });
@@ -78,8 +80,19 @@ function renderDataInTheTable(orders) {
 
 function createTableForTransaction(filledOrder) {
   const table = document.createElement("table");
+  table.id="transTable"
   const tableBody = document.createElement("tbody");
 
+    const newRow = document.createElement("tr");
+    let cell = document.createElement("td");
+    cell.innerText = "Quantity";
+    newRow.appendChild(cell);
+
+    cell = document.createElement("td");
+    cell.innerText = "Price";
+    newRow.appendChild(cell);
+
+     tableBody.appendChild(newRow);
 
 
   for (let orderNo = 0; orderNo < filledOrder.length; orderNo++) {
