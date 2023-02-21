@@ -9,13 +9,19 @@
 <body>
     <h1>ESOPS Trading Platform</h1>
 
+    <div class ="userName">
+        <label for="fname"  >UserName</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter userName" >
+    </div>
+
     <div class="container">
-    <button class="block1" onclick="addOrder()" >Place Order </button>&nbsp;&nbsp;&nbsp;
+    <button class="block1" onclick="addOrder()" >Place Order </button>&nbsp;&nbsp;&nbsp
     <button class= "block2" onclick="viewOrders()" >View Order History</button>
     </div>
 
     <script>
         function addOrder() {
+
             location.href = location.href = "../addOrder/AddOrder.html";
         }
         function viewOrders()
