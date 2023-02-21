@@ -10,9 +10,19 @@
     <h1>ESOPS Trading Platform</h1>
 
     <div class="container">
-    <button class="block1" >Place Order </button>&nbsp;&nbsp;&nbsp;
-    <button class= "block2" >View Order History</button>
+    <button class="block1" onclick="addOrder()" >Place Order </button>&nbsp;&nbsp;&nbsp;
+    <button class= "block2" onclick="viewOrders()" >View Order History</button>
     </div>
+
+    <script>
+        function addOrder() {
+            location.href = location.href = "../addOrder/AddOrder.html";
+        }
+        function viewOrders()
+        {
+            location.href = location.href = "../viewOrderHistory/viewOrderHistory.html";
+        }
+    </script>
 
 </body>
 
